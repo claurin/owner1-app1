@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AWS POC</title>
+    <meta charset="UTF-8">
+    <base href="https://ssspa-dev.claurin.net/owner1/app1/" />
+    <link rel="shortcut icon" href="assets/images/favicon.ico"> 
+    <script id="connector" src="connector.js"></script> 
+    <script id="app" src="assets/app.js" defer="defer"></script>
+    <style>
+        body {font-family: monospace; font-size:larger;}
+        section {padding-top:30px;}
+        label {display:block;}
+        input[type="text"] {width: 85%;} 
+        p { white-space:pre; }
+        p.is-error {color:#c70202;}
+        button {cursor: pointer;min-width:50px;}
+        button.hidden {display:none;}
+    </style>
+</head>    
+<body>
+    <section id="user"></section>
+    <section id="api1">
+        <label for="inApi">API #1 URL (No Authh):</label>
+        <input id="inApi"  type="text"/>
+        <button id="btnApi" type="button" onclick="fetchApi()" >Fetch</button>
+    </section>
+    <section id="api2">
+        <label for="inApi2">API #2 URL:</label>
+        <input id="inApi2" type="text"/>
+        <button id="btnApi2" type="button" onclick="fetchApi2()">Fetch</button>
+    </section>
+    <section id="toolbox">
+        <label>Auto clear<input type="checkbox" id="chkAuto" checked></label>
+        <button id="btnClear" type="button" onclick="clearResp()">Clear</button>
+        <button id="btnDisconnect" type="button" onclick="connection.disconnect()" class="hidden">Disconnect</button>        
+    </section>
+    <section id="image">
+        <img src="assets/images/snowtrees.jpeg">
+    </section>
+    <section id="response"></section>
+    
+</body>
+</html>
