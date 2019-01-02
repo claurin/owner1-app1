@@ -1,8 +1,10 @@
 const fetchApi = async () => {
 
+
     const url = document.getElementById("inApi").value;
     const start = new Date();
 
+    
     try {
         const response = await fetch(url);
         if(response.status >= 400) 
